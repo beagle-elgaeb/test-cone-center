@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/test-alef/static/css/main.949c74ce.chunk.css",
-    "main.js": "/test-alef/static/js/main.9aabb8ce.chunk.js",
-    "main.js.map": "/test-alef/static/js/main.9aabb8ce.chunk.js.map",
-    "runtime-main.js": "/test-alef/static/js/runtime-main.2f4892ee.js",
-    "runtime-main.js.map": "/test-alef/static/js/runtime-main.2f4892ee.js.map",
-    "static/css/2.679831fc.chunk.css": "/test-alef/static/css/2.679831fc.chunk.css",
-    "static/js/2.2787df14.chunk.js": "/test-alef/static/js/2.2787df14.chunk.js",
-    "static/js/2.2787df14.chunk.js.map": "/test-alef/static/js/2.2787df14.chunk.js.map",
-    "static/js/3.126bd7e4.chunk.js": "/test-alef/static/js/3.126bd7e4.chunk.js",
-    "static/js/3.126bd7e4.chunk.js.map": "/test-alef/static/js/3.126bd7e4.chunk.js.map",
-    "index.html": "/test-alef/index.html",
-    "static/css/2.679831fc.chunk.css.map": "/test-alef/static/css/2.679831fc.chunk.css.map",
-    "static/css/main.949c74ce.chunk.css.map": "/test-alef/static/css/main.949c74ce.chunk.css.map",
-    "static/js/2.2787df14.chunk.js.LICENSE.txt": "/test-alef/static/js/2.2787df14.chunk.js.LICENSE.txt"
+    "main.css": "/test-cone-center/static/css/main.949c74ce.chunk.css",
+    "main.js": "/test-cone-center/static/js/main.0c5d08a5.chunk.js",
+    "main.js.map": "/test-cone-center/static/js/main.0c5d08a5.chunk.js.map",
+    "runtime-main.js": "/test-cone-center/static/js/runtime-main.bc048f9c.js",
+    "runtime-main.js.map": "/test-cone-center/static/js/runtime-main.bc048f9c.js.map",
+    "static/css/2.679831fc.chunk.css": "/test-cone-center/static/css/2.679831fc.chunk.css",
+    "static/js/2.dfe4cfd1.chunk.js": "/test-cone-center/static/js/2.dfe4cfd1.chunk.js",
+    "static/js/2.dfe4cfd1.chunk.js.map": "/test-cone-center/static/js/2.dfe4cfd1.chunk.js.map",
+    "static/js/3.aaaa8b59.chunk.js": "/test-cone-center/static/js/3.aaaa8b59.chunk.js",
+    "static/js/3.aaaa8b59.chunk.js.map": "/test-cone-center/static/js/3.aaaa8b59.chunk.js.map",
+    "index.html": "/test-cone-center/index.html",
+    "static/css/2.679831fc.chunk.css.map": "/test-cone-center/static/css/2.679831fc.chunk.css.map",
+    "static/css/main.949c74ce.chunk.css.map": "/test-cone-center/static/css/main.949c74ce.chunk.css.map",
+    "static/js/2.dfe4cfd1.chunk.js.LICENSE.txt": "/test-cone-center/static/js/2.dfe4cfd1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2f4892ee.js",
+    "static/js/runtime-main.bc048f9c.js",
     "static/css/2.679831fc.chunk.css",
-    "static/js/2.2787df14.chunk.js",
+    "static/js/2.dfe4cfd1.chunk.js",
     "static/css/main.949c74ce.chunk.css",
-    "static/js/main.9aabb8ce.chunk.js"
+    "static/js/main.0c5d08a5.chunk.js"
   ]
 }
