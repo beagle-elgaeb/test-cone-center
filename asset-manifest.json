@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/test-alef/static/css/main.949c74ce.chunk.css",
+    "main.js": "/test-alef/static/js/main.9aabb8ce.chunk.js",
+    "main.js.map": "/test-alef/static/js/main.9aabb8ce.chunk.js.map",
+    "runtime-main.js": "/test-alef/static/js/runtime-main.2f4892ee.js",
+    "runtime-main.js.map": "/test-alef/static/js/runtime-main.2f4892ee.js.map",
+    "static/css/2.679831fc.chunk.css": "/test-alef/static/css/2.679831fc.chunk.css",
+    "static/js/2.2787df14.chunk.js": "/test-alef/static/js/2.2787df14.chunk.js",
+    "static/js/2.2787df14.chunk.js.map": "/test-alef/static/js/2.2787df14.chunk.js.map",
+    "static/js/3.126bd7e4.chunk.js": "/test-alef/static/js/3.126bd7e4.chunk.js",
+    "static/js/3.126bd7e4.chunk.js.map": "/test-alef/static/js/3.126bd7e4.chunk.js.map",
+    "index.html": "/test-alef/index.html",
+    "static/css/2.679831fc.chunk.css.map": "/test-alef/static/css/2.679831fc.chunk.css.map",
+    "static/css/main.949c74ce.chunk.css.map": "/test-alef/static/css/main.949c74ce.chunk.css.map",
+    "static/js/2.2787df14.chunk.js.LICENSE.txt": "/test-alef/static/js/2.2787df14.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2f4892ee.js",
+    "static/css/2.679831fc.chunk.css",
+    "static/js/2.2787df14.chunk.js",
+    "static/css/main.949c74ce.chunk.css",
+    "static/js/main.9aabb8ce.chunk.js"
+  ]
+}
