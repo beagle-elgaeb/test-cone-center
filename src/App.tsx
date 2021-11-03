@@ -11,10 +11,17 @@ function App() {
     const input = evt.currentTarget;
     const prevDate = new Date(date);
 
-    let cursor = input.selectionStart;
+    let cursorStart;
+    let cursorEnd;
+
+    const activeCursor =
+      input.selectionDirection === "forward"
+        ? input.selectionEnd
+        : input.selectionStart;
+
     let delta;
 
-    if (cursor === null) {
+    if (activeCursor === null) {
       return;
     }
 
@@ -30,7 +37,8 @@ function App() {
 
     evt.preventDefault();
 
-    if (cursor <= 2) {
+    // ------------------------------- ДЕНЬ ---------------------------------------
+    if (activeCursor <= 2) {
       date.setDate(date.getDate() + delta);
 
       if (!ignoreBorders) {
@@ -44,10 +52,12 @@ function App() {
         );
       }
 
-      cursor = 2;
+      cursorStart = 0;
+      cursorEnd = 2;
     }
 
-    if (cursor >= 3 && cursor <= 3 + getMonth(date).length) {
+    // ------------------------------- МЕСЯЦ --------------------------------------
+    else if (activeCursor >= 3 && activeCursor <= 3 + getMonth(date).length) {
       date.setMonth(date.getMonth() + delta);
 
       if (!ignoreBorders) {
@@ -61,21 +71,25 @@ function App() {
         );
       }
 
-      cursor = 3 + getMonth(date).length;
+      cursorStart = 3;
+      cursorEnd = 3 + getMonth(date).length;
     }
 
-    if (
-      cursor >= 4 + getMonth(date).length &&
-      cursor <= 8 + getMonth(date).length
+    // ------------------------------- ГОД ----------------------------------------
+    else if (
+      activeCursor >= 4 + getMonth(date).length &&
+      activeCursor <= 8 + getMonth(date).length
     ) {
       date.setFullYear(date.getFullYear() + delta);
 
-      cursor = 8 + getMonth(date).length;
+      cursorStart = 4 + getMonth(date).length;
+      cursorEnd = 8 + getMonth(date).length;
     }
 
-    if (
-      cursor >= 9 + getMonth(date).length &&
-      cursor <= 11 + getMonth(date).length
+    // ------------------------------- ЧАСЫ -----------------------------------
+    else if (
+      activeCursor >= 9 + getMonth(date).length &&
+      activeCursor <= 11 + getMonth(date).length
     ) {
       date.setHours(date.getHours() + delta);
 
@@ -90,12 +104,14 @@ function App() {
         );
       }
 
-      cursor = 11 + getMonth(date).length;
+      cursorStart = 9 + getMonth(date).length;
+      cursorEnd = 11 + getMonth(date).length;
     }
 
-    if (
-      cursor >= 12 + getMonth(date).length &&
-      cursor <= 14 + getMonth(date).length
+    // ------------------------------- МИНУТЫ ---------------------------------
+    else if (
+      activeCursor >= 12 + getMonth(date).length &&
+      activeCursor <= 14 + getMonth(date).length
     ) {
       date.setMinutes(date.getMinutes() + delta);
 
@@ -110,12 +126,14 @@ function App() {
         );
       }
 
-      cursor = 14 + getMonth(date).length;
+      cursorStart = 12 + getMonth(date).length;
+      cursorEnd = 14 + getMonth(date).length;
     }
 
-    if (
-      cursor >= 15 + getMonth(date).length &&
-      cursor <= 17 + getMonth(date).length
+    // ------------------------------- СЕКУНДЫ --------------------------------
+    else if (
+      activeCursor >= 15 + getMonth(date).length &&
+      activeCursor <= 17 + getMonth(date).length
     ) {
       date.setSeconds(date.getSeconds() + delta);
 
@@ -130,11 +148,15 @@ function App() {
         );
       }
 
-      cursor = 17 + getMonth(date).length;
+      cursorStart = 15 + getMonth(date).length;
+      cursorEnd = 17 + getMonth(date).length;
+    } else {
+      return;
     }
 
     input.value = formatDate(date);
-    input.selectionEnd = cursor;
+    input.selectionEnd = cursorEnd;
+    input.selectionStart = cursorStart;
   }
 
   const dateText = formatDate(ref.current);
@@ -150,7 +172,7 @@ export default App;
 
 const Container = styled.div`
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,6 +189,6 @@ const Input = styled.input`
   box-shadow: inset 0 0 3px 1px lightgray;
   font-size: 16px;
   line-height: 30px;
-  margin: 50px 0 0 50px;
+  margin: 0;
   padding: 0 10px 0 10px;
 `;
